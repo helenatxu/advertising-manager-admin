@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import update from 'immutability-helper'
-import axios from 'axios'
+import React, { Component } from 'react';
+import update from 'immutability-helper';
+import axios from 'axios';
 
 class BannersList extends Component {
   constructor(props) {
@@ -69,22 +69,22 @@ class BannersList extends Component {
             value={this.state.inputValue} onChange={this.handleChange} />
 
         </div>
-  <div className="listWrapper">
-     <ul className="bannerList">
-      {this.state.banners.map((banner) => {
-        return(
-          <li className="banner" banner={banner} key={banner.id}>
-            <span className="deleteBannerBtn"
-              onClick={(e) => this.deleteBanner(banner.id)}>
-              x
-            </span>
-            <p className="bannerLabel">{banner.name}</p>
-            <p className="bannerLabel">{banner.text}</p>
-          </li>
-        )
-      })}
-     </ul>
-  </div>
+        <div className="listWrapper">
+           <ul className="bannerList">
+            {this.state.banners.map((banner) => {
+              return(
+                <li className="banner" banner={banner} key={banner.id}>
+                  <span className="deleteBannerBtn"
+                    onClick={(e) => this.deleteBanner(banner.id)}>
+                    x
+                  </span>
+                  <p className="bannerLabel">{banner.name}</p>
+                  <p className="bannerLabel">{banner.text}</p>
+                </li>
+              )
+            })}
+           </ul>
+        </div>
      </div>
     )
   }
