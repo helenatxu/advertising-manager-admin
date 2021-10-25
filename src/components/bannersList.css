@@ -1,0 +1,75 @@
+ul.bannerList {
+  padding: 0 25px;
+}
+
+li.banner {
+  list-style-type: none;
+  font-family: Tahoma;
+  font-size: 1.2em;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+li.banner:hover .deleteBannerBtn {
+  visibility: visible;
+  opacity: 1;
+}
+
+label.bannerLabel {
+  color: black;
+}
+
+input[placeholder] {
+  font-size: 1.1em;
+}
+
+.list {
+  width: 40%;
+  height: 700px;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.header {
+  color: black;
+  padding: 5px;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+}
+
+.inputList {
+  padding: 15px;
+}
+
+.inputList .bannerInput {
+  padding: 10px;
+  width: 100%;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.listWrapper {
+  position: absolute;
+  bottom: 50px;
+  top: 160px;
+  right: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.deleteBannerBtn {
+  float: right;
+  color: red;
+  background: rgba(0,0,0,0);
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 30px 5px;
+  visibility: hidden;
+  opacity: 0;
+  line-height: 0;
+  margin-right: 5px;
+  cursor: default;
+}

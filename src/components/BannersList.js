@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import update from 'immutability-helper';
 import axios from 'axios';
+import './bannersList.css';
 
 class BannersList extends Component {
   constructor(props) {
