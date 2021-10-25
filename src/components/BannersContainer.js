@@ -11,6 +11,14 @@ class BannersContainer extends Component {
     }
   }
 
+  handleChange = (e) => {
+    this.setState({inputValue: e.target.value});
+  }
+
+  componentDidMount() {
+    this.getBanners()
+  }
+
   getBanners() {
     fetch('/api/v1/banners')
     .then(response => response.json())
@@ -37,12 +45,6 @@ class BannersContainer extends Component {
     }
   }
 
-  handleChange = (e) => {
-    this.setState({inputValue: e.target.value});
-  }
-
-  componentDidMount() {
-    this.getBanners()
   deleteBanner = (id) => {
     axios.delete(`/api/v1/banners/${id}`)
     .then(response => {
