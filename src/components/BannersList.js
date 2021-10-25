@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import update from 'immutability-helper'
 import axios from 'axios'
 
-class BannersContainer extends Component {
+class BannersList extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -62,7 +62,7 @@ class BannersContainer extends Component {
   render() {
     return (
       <div>
-        <div className="inputContainer">
+        <div className="inputList">
           <input className="bannerInput" type="text"
             placeholder="Add a banner" maxLength="50"
             onKeyPress={this.createBanner}
@@ -90,4 +90,4 @@ class BannersContainer extends Component {
   }
 }
 
-export default BannersContainer
+export default BannersList
