@@ -75,14 +75,19 @@ class BannersList extends Component {
            <ul className="bannerList">
             {this.state.banners.map((banner) => {
               return(
-                <li className="banner" banner={banner} key={banner.id}>
-                  <span className="deleteBannerBtn"
-                    onClick={(e) => this.deleteBanner(banner.id)}>
-                    x
-                  </span>
-                  <p className="bannerLabel">{banner.name}</p>
-                  <p className="bannerLabel">{banner.text}</p>
-                </li>
+                <div className="banner-preview" key={banner.id}>
+                  <Link to={`/banners/${banner.id}`}>
+                    <p>{banner.title}</p>
+                    <li className="banner" banner={banner} key={banner.id}>
+                      <span className="deleteBannerBtn"
+                        onClick={(e) => this.deleteBanner(banner.id)}>
+                        x
+                      </span>
+                      <p className="bannerLabel">{banner.name}</p>
+                      <p className="bannerLabel">{banner.text}</p>
+                    </li>
+                  </Link>
+                </div>
               )
             })}
            </ul>
