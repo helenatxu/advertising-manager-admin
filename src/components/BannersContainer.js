@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import update from 'immutability-helper'
 import axios from 'axios'
 
 class BannersContainer extends Component {
