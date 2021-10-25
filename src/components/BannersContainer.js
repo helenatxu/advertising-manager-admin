@@ -43,6 +43,18 @@ class BannersContainer extends Component {
 
   componentDidMount() {
     this.getBanners()
+  deleteBanner = (id) => {
+    axios.delete(`/api/v1/banners/${id}`)
+    .then(response => {
+      const bannerIndex = this.state.banners.findIndex(x => x.id === id)
+      const banners = update(this.state.banners, {
+        $splice: [[bannerIndex, 1]]
+      })
+      this.setState({
+        banners: banners
+      })
+    })
+    .catch(error => console.log(error))
   }
 
   render() {
