@@ -72,10 +72,12 @@ class BannersContainer extends Component {
       {this.state.banners.map((banner) => {
         return(
           <li className="banner" banner={banner} key={banner.id}>
-
-      <p className="bannerLabel">{banner.name}</p>
-      <p className="bannerLabel">{banner.text}</p>
-      <span className="deleteBannerBtn">x</span>
+            <span className="deleteBannerBtn"
+              onClick={(e) => this.deleteBanner(banner.id)}>
+              x
+            </span>
+            <p className="bannerLabel">{banner.name}</p>
+            <p className="bannerLabel">{banner.text}</p>
           </li>
         )
       })}
