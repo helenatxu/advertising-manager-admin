@@ -6,12 +6,16 @@ import BannersList from './components/BannersList'
 class App extends Component {
   render() {
     return (
-      <div className="list">
-        <div className="header">
-          <h1>Banner List</h1>
+      <Router>
+        <div className="App">
+          <div className="list">
+            <div className="header">
+              <h1>Banner List</h1>
+            </div>
+            <BannersList />
+          </div>
         </div>
-        <BannersList />
-      </div>
+      </Router>
     );
   }
 }
