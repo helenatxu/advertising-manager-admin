@@ -6,7 +6,8 @@ class BannersContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      banners: []
+      banners: [],
+      inputValue: ''
     }
   }
 
@@ -28,11 +29,16 @@ class BannersContainer extends Component {
           $splice: [[0, 0, response.data]]
         })
         this.setState({
-          banners: banners
+          banners: banners,
+          inputValue: ''
         })
       })
       .catch(error => console.log(error))
     }
+  }
+
+  handleChange = (e) => {
+    this.setState({inputValue: e.target.value});
   }
 
   componentDidMount() {
@@ -45,7 +51,9 @@ class BannersContainer extends Component {
         <div className="inputContainer">
           <input className="bannerInput" type="text"
             placeholder="Add a banner" maxLength="50"
-            onKeyPress={this.createBanner} />
+            onKeyPress={this.createBanner}
+            value={this.state.inputValue} onChange={this.handleChange} />
+
         </div>
   <div className="listWrapper">
      <ul className="bannerList">
