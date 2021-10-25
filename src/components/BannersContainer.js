@@ -20,6 +20,21 @@ class BannersContainer extends Component {
     .catch(error => console.error(error));
   }
 
+  createBanner = (e) => {
+    if (e.key === 'Enter') {
+      axios.post('/api/v1/banners', {banner: {name: e.target.value}})
+      .then(response => {
+        const banners = update(this.state.banners, {
+          $splice: [[0, 0, response.data]]
+        })
+        this.setState({
+          banners: banners
+        })
+      })
+      .catch(error => console.log(error))
+    }
+  }
+
   componentDidMount() {
     this.getBanners()
   }
