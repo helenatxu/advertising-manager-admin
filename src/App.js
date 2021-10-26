@@ -5,6 +5,7 @@ import AdminPanel from './components/AdminPanel'
 import Navigation from './components/Navigation';
 import Create from './components/Create';
 import Banner from './components/Banner';
+import BannersList from './components/BannersList';
 
 class App extends Component {
   render() {
@@ -24,6 +25,9 @@ class App extends Component {
             </Route>
             <Route path="/api/v1/banners/:id">
               <Banner/>
+            </Route>
+            <Route path="/api/v1/banners">
+              <BannersList/>
             </Route>
           </Switch>
           </div>
