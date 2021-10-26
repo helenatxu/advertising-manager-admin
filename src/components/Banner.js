@@ -7,7 +7,7 @@ const Banner = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    fetch('/api/v1/banners'+ banner.id, {
+    fetch('/api/v1/banners/'+ banner.id, {
       method: 'DELETE'
     }).then(() => {
       history.push('/');
