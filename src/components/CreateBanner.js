@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Create = () => {
+const CreateBanner = () => {
   const [name, setName] = useState('');
   const [text, setText] = useState('');
   const [isPending, setIsPending] = useState(false);
@@ -47,4 +47,4 @@ const Create = () => {
   );
 }
 
-export default Create;
+export default CreateBanner;
