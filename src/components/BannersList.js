@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import update from 'immutability-helper';
-import axios from 'axios';
+import Banner from './Banner';
 import './bannersList.css';
 
 const BannersList = ({banners, name}) => {
