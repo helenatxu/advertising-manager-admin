@@ -10,6 +10,10 @@ const AdminPanel = () => {
         <p>Manage banners</p>
       </Link>
 
+      <Link to={`/api/v1/campaigns/`}>
+        <p>Manage campaigns</p>
+      </Link>
+
     </div>
   );
 }
