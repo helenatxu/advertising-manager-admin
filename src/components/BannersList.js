@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Banner from './Banner';
 import './bannersList.css';
 
 const BannersList = ({banners, name}) => {
