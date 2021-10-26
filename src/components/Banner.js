@@ -16,7 +16,7 @@ const Banner = () => {
 
   return (
     <div className="banner-details">
-      <h1>Banner Details</h1>
+      <h3>Banner Details</h3>
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
       <article >

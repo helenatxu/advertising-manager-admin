@@ -14,7 +14,6 @@ class App extends Component {
           <Navigation/>
           <div className="list">
             <div className="header">
-              <h1>Banners List</h1>
             </div>
             <Switch>
             <Route exact path="/">
