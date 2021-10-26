@@ -37,32 +37,21 @@ class BannersList extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <div className="listWrapper">
-           <ul className="bannerList">
-            {this.state.banners.map((banner) => {
-              return(
-                <div className="banner-preview" key={banner.id}>
-                  <Link to={`/banners/${banner.id}`}>
-                    <p>{banner.title}</p>
-                    <li className="banner" banner={banner} key={banner.id}>
-                      <span className="deleteBannerBtn"
-                        onClick={(e) => this.deleteBanner(banner.id)}>
-                        x
-                      </span>
-                      <p className="bannerLabel">{banner.name}</p>
-                      <p className="bannerLabel">{banner.text}</p>
-                    </li>
-                  </Link>
-                </div>
               )
             })}
            </ul>
+  return (
+    <div className="banner-list">
+      <h2>Banners List</h2>
+      {banners.map(banner => (
+        <div className="banner-preview" key={banner.id}>
+          <Link to={`/api/v1/banners/${banner.id}`}>
+            <p>{banner.name}</p>
+          </Link>
         </div>
-     </div>
-    )
-  }
+      ))}
+    </div>
+  );
 }
 
-export default BannersList
+export default BannersList;
