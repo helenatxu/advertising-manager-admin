@@ -17,6 +17,11 @@ code {
   font-family: "Quicksand";
   color: #333;
 }
+
+p, button {
+  margin: 10px 5px;
+}
+
 .navbar {
   padding: 20px;
   display: flex;
