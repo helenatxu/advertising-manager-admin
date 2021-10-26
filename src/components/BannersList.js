@@ -4,42 +4,7 @@ import update from 'immutability-helper';
 import axios from 'axios';
 import './bannersList.css';
 
-class BannersList extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      banners: [],
-      inputValue: ''
-    }
-  }
-
-  handleChange = (e) => {
-    this.setState({inputValue: e.target.value});
-  }
-
-  componentDidMount() {
-    this.getBanners()
-  }
-
-
-  deleteBanner = (id) => {
-    axios.delete(`/api/v1/banners/${id}`)
-    .then(response => {
-      const bannerIndex = this.state.banners.findIndex(x => x.id === id)
-      const banners = update(this.state.banners, {
-        $splice: [[bannerIndex, 1]]
-      })
-      this.setState({
-        banners: banners
-      })
-    })
-    .catch(error => console.log(error))
-  }
-
-  render() {
-              )
-            })}
-           </ul>
+const BannersList = ({banners, name}) => {
   return (
     <div className="banner-list">
       <h2>Banners List</h2>
