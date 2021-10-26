@@ -29,18 +29,19 @@ class App extends Component {
             <Route path="/create_campaign">
               <CreateCampaign/>
             </Route>
-            <Route path="/api/v1/banners">
-              <BannersList/>
-            </Route>
             <Route path="/api/v1/banners/:id">
               <Banner/>
             </Route>
-            <Route path="/api/v1/campaigns">
-              <CampaignsList/>
+            <Route path="/api/v1/banners">
+              <BannersList/>
             </Route>
             <Route path="/api/v1/campaigns/:id">
               <Campaign/>
             </Route>
+            <Route path="/api/v1/campaigns">
+              <CampaignsList/>
+            </Route>
+
           </Switch>
           </div>
         </div>
