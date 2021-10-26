@@ -31,22 +31,6 @@ class BannersList extends Component {
     .catch(error => console.error(error));
   }
 
-  createBanner = (e) => {
-    if (e.key === 'Enter') {
-      axios.post('/api/v1/banners', {banner: {name: e.target.value}})
-      .then(response => {
-        const banners = update(this.state.banners, {
-          $splice: [[0, 0, response.data]]
-        })
-        this.setState({
-          banners: banners,
-          inputValue: ''
-        })
-      })
-      .catch(error => console.log(error))
-    }
-  }
-
   deleteBanner = (id) => {
     axios.delete(`/api/v1/banners/${id}`)
     .then(response => {
@@ -64,13 +48,6 @@ class BannersList extends Component {
   render() {
     return (
       <div>
-        <div className="inputList">
-          <input className="bannerInput" type="text"
-            placeholder="Add a banner" maxLength="50"
-            onKeyPress={this.createBanner}
-            value={this.state.inputValue} onChange={this.handleChange} />
-
-        </div>
         <div className="listWrapper">
            <ul className="bannerList">
             {this.state.banners.map((banner) => {
