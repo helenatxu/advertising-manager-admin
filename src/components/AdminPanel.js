@@ -1,4 +1,4 @@
-import BannerList from './BannerList';
+import BannersList from './BannersList';
 import useFetch from './useFetch';
 
 const AdminPanel = () => {
