@@ -21,15 +21,6 @@ class BannersList extends Component {
     this.getBanners()
   }
 
-  getBanners() {
-    fetch('/api/v1/banners')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      this.setState({banners: data})
-    })
-    .catch(error => console.error(error));
-  }
 
   deleteBanner = (id) => {
     axios.delete(`/api/v1/banners/${id}`)
